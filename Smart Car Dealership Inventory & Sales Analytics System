@@ -1,0 +1,43 @@
+# Smart Car Dealership Inventory & Sales Analytics System
+
+## Course
+DSE 6200 – Modern Databases  
+Winter 2026
+
+## Team Members
+- Md Ibrahim Khalil
+- [Partner Name]
+
+## Project Description
+This project is a web-based car dealership inventory and sales analytics system developed using MongoDB as the NoSQL backend and Flask as the web interface. The system allows users to create, retrieve, update, and delete car sales records through a browser.
+
+## Dataset
+The dataset is randomly generated using a Python script. It includes car brand, model, year, price, sale date, dealer location, customer city, salesperson, and status.
+
+## Technologies Used
+- Python
+- Flask
+- MongoDB
+- HTML
+
+## Features
+- Add a new car record
+- View car records
+- Edit car records
+- Delete car records
+- Sales analytics by year
+
+## Files
+- `app.py` – main Flask application
+- `generate_data.py` – generates random dataset
+- `templates/` – HTML pages
+- `requirements.txt` – required Python packages
+
+## How to Run
+1. Start MongoDB
+2. Run `python generate_data.py`
+3. Run `python app.py`
+4. Open `http://127.0.0.1:5000` in a browser
+
+## Notes
+This project was developed for the DSE 6200 course project requirement to demonstrate a NoSQL backend with a user interface and CRUD functionality.
