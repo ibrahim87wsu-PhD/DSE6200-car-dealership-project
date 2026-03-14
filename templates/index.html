@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Sales System</title>
+</head>
+<body>
+    <h1>Smart Car Dealership Inventory & Sales Analytics System</h1>
+
+    <p><a href="/add">Add New Car Record</a></p>
+    <p><a href="/analytics">View Sales Analytics</a></p>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Car ID</th>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Price</th>
+            <th>Dealer Location</th>
+            <th>Actions</th>
+        </tr>
+        {% for car in cars %}
+        <tr>
+            <td>{{ car.car_id }}</td>
+            <td>{{ car.brand }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.year }}</td>
+            <td>{{ car.price }}</td>
+            <td>{{ car.dealer_location }}</td>
+            <td>
+                <a href="/edit/{{ car._id }}">Edit</a> |
+                <a href="/delete/{{ car._id }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

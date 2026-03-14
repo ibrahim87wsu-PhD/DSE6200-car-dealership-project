@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Car</title>
+</head>
+<body>
+    <h1>Edit Car Record</h1>
+
+    <form method="POST">
+        <p>Car ID: <input type="text" name="car_id" value="{{ car.car_id }}" required></p>
+        <p>Brand: <input type="text" name="brand" value="{{ car.brand }}" required></p>
+        <p>Model: <input type="text" name="model" value="{{ car.model }}" required></p>
+        <p>Year: <input type="number" name="year" value="{{ car.year }}" required></p>
+        <p>Price: <input type="number" name="price" value="{{ car.price }}" required></p>
+        <p>Sale Date: <input type="text" name="sale_date" value="{{ car.sale_date }}" required></p>
+        <p>Dealer Location: <input type="text" name="dealer_location" value="{{ car.dealer_location }}" required></p>
+        <p>Customer City: <input type="text" name="customer_city" value="{{ car.customer_city }}" required></p>
+        <p>Salesperson: <input type="text" name="salesperson" value="{{ car.salesperson }}" required></p>
+        <p>Status: <input type="text" name="status" value="{{ car.status }}" required></p>
+        <button type="submit">Update Record</button>
+    </form>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

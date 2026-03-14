@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Analytics</title>
+</head>
+<body>
+    <h1>Sales Analytics by Year</h1>
+
+    <form method="POST">
+        <p>Enter Year: <input type="number" name="year" required></p>
+        <button type="submit">Show Analytics</button>
+    </form>
+
+    {% if selected_year %}
+        <h2>Total Sales by Brand for {{ selected_year }}</h2>
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Brand</th>
+                <th>Total Sales</th>
+            </tr>
+            {% for row in results %}
+            <tr>
+                <td>{{ row._id }}</td>
+                <td>{{ row.total_sales }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>
